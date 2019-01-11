@@ -154,7 +154,7 @@ h3.pres1{
   display: table;
   clear: both;
 }
-@media screen and (max-width: 780px){
+@media screen and (max-width: 1080px){
   header{
     height: 50px;
   }
