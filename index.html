@@ -1,136 +1,345 @@
 <!DOCTYPE html>
 <html lang="fr-FR" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width , initial-scale=1.0">
-  <meta name="description" content="Présentation de Théo Levert - CV">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
-   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400i" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Neuton:700" rel="stylesheet">
 </head>
-<body>
-  <video id="video" autoplay="" muted="" loop="">
-    <source src="img/web.mp4" type="video/mp4">
-  </video>
-  <header>
-      <h1>Théo Levert</h1>
-      <h2 class="soustitle">Développeur web junior</h2>
-  </header>
-  <nav id="navbar">
-    <div class="table">
-      <ul>
-        <li class="menu-ind">
-          <a href="#présentation">Présentation</a>
-        </li>
-        <li class="menu-exp">
-          <a href="#expériences">Expériences professionnelles</a>
-        </li>
-        <li class="menu-hob">
-          <a href="#compétences">Compétences</a>
-        </li>
-        <li class="menu-con">
-          <a href="#contact">Contactez-moi !</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <article>
-    <section class="présentation" id="présentation" >
-      <h1 class="question">Qui suis-je ?</h1>
-      <div class="sec">
-        <div class="left">
-          <img src="img/index.png"  alt="avatar">
+<body background="img/texture.png";>
+  <div class="row" id="row1">
+    <div class="col">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#sectionhome">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#place">Expériences/Formations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#place2">Mes compétences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#place3" tabindex="-1" aria-disabled="true">Loisirs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#location" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="right">
-          <p class="pres">je m'appelle Théo Levert j'ai 19ans.</p>
-          <p class="pres">je suis actuellement en formation développeur web dans l'organisme de formation E2N à Noyon!</p>
-        </div>
-      </div>
-    </section>
-    <section class="parcours" id="expériences">
-      <h1>Parcours et expériences</h1>
-      <div class="sec">
-        <h2 class="sco">expériences professionnelles</h2>
-        <div class="exp">
-          <div class="left1">
-            <h3> Janvier - Juin 2019</h3>
-            <p>Préparation du titre professionnel bac +2</p>
+      </nav>
+      <!-- À propos -->
+      <section id="sectionhome">
+        <div class="container">
+          <img src="img/theo.jpg" alt="">
+          <h1 class="titleHome">Théo LEVERT<br>Développeur Web Junior</h1>
+          <p class="descriptionHome">Passionné par les nouvelles technologies et l'informatique, je suis a la recherche d'une entreprise pour suivre un parcours en alternance.<br></p>
+          <p>Diplôme en cours de chargement !</p>
+          <div class="progress" id="progress1">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 6%">6%</div>
           </div>
-          <div class="right">
-            <h3>Septembre 2019 - Août 2020</h3>
-            <p>Préparation du titre professionnel bac +3/4</p>
-          </div>
-        </div>
-        <div class="exp">
-          <div class="left1">
-            <h3> BlaBlaBla 2020</h3>
-          </div>
-          <div class="right">
-            <h3>BlaBlaBla</h3>
-            <p>BlaBlaBlaBla</p>
-          </div>
-        </div>
-        <h2 class="sco">Parcours scolaire</h2>
-        <div class="exp">
-          <div class="left1">
-            <h3> 2015 - 2016</h3>
-            <p>Obtention du cap</p>
+          <!--En savoir plus-->
+          <button id="place" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+            En savoir Plus
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-primary">Je m'appel Théo j'ai 19ans je vis a Hombleux dans la Somme. Je cherche a me réorienter professionnellement. Je suis actuellement en formation dans le but d'obtenir le Titre Professionnel « Développeur web » RNCP 31114 niveau III BAC+2.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="exp">
-          <div class="left1">
-            <h3> 2016 - 2017</h3>
-            <p>Obtention du Bac</p>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <hr id="hr1">
           </div>
         </div>
       </div>
-    </section>
-    <section class="compétences" id="compétences">
-      <h1 class="question">Compétences et niveau</h1>
-      <div class="sec">
-        <div class="cleft">
-          <div class="sous">
-            <div class="sousleft"><h3 class="pres1">Compétences</h3></div>
-            <div class="sousright"><h3 class="pres1">Niveaux</h3></div>
-          </div>
-          <div class="sous">
-            <div class="sousleft"><p class="pres">HTML / CSS</p></div>
-            <div class="sousright"><p><progress value="60" max="100">0%</progress></p></div>
-          </div>
-          <div class="sous">
-            <div class="sousleft"><p class="pres">JavaScript</p></div>
-            <div class="sousright"><p><progress value="" max="100">0%</progress></p></div>
-          </div>
+      <!--Cursus-->
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+          <h2 id="about">A propos</h2>
+          <h3 id="about1">Tout mon cursus.</h3>
         </div>
-        <div class="cright">
-          <div class="sous">
-            <div class="sousleft"><h3 class="pres1">Compétences</h3></div>
-            <div class="sousright"><h3 class="pres1">Niveaux</h3></div>
+      </div>
+      <!-- Timeline -->
+      <section id="timeline">
+        <article>
+          <div class="inner">
+            <span class="date">
+              <span class="day">30<sup></sup></span>
+              <span class="month">Juin</span>
+              <span class="year">2016</span>
+            </span>
+            <h2>Cap Maintenance des Véhicules</h2>
+            <p>Obtention du CAP</p>
           </div>
-          <div class="sous">
-            <div class="sousleft"><p class="pres">PHP / SQL</p></div>
-            <div class="sousright"><p><progress value="" max="100">0%</progress></p></div>
+        </article>
+        <article>
+          <div class="inner">
+            <span class="date">
+              <span class="day">30<sup></sup></span>
+              <span class="month">Juin</span>
+              <span class="year">2017</span>
+            </span>
+            <h2>Bac Maintenance des Véhicules</h2>
+            <p>Obtention du BAC</p>
           </div>
-          <div class="sous">
-            <div class="sousleft"><p class="pres">Git / GitHub</p></div>
-            <div class="sousright"><p><progress value="70" max="100">0%</progress></p></div>
+        </article>
+        <article>
+          <div class="inner">
+            <span class="date">
+              <span class="day">10<sup></sup></span>
+              <span class="month">Juil</span>
+              <span class="year">2018</span>
+            </span>
+            <h2>Mécanicien</h2>
+            <p>Mécanicien à l'Ets François à Brouchy</p>
+          </div>
+        </article>
+        <article>
+          <div class="inner">
+            <span class="date">
+              <span class="day">3<sup></sup></span>
+              <span class="month">Sept</span>
+              <span class="year">2018</span>
+            </span>
+            <h2>Conducteur d'engins Forestier</h2>
+            <p>Conducteur d'engins forestier chez SARL Ter'Agri à Golancourt</p>
+          </div>
+        </article>
+        <article>
+          <div class="inner">
+            <span class="date">
+              <span class="day">2<sup></sup></span>
+              <span class="month">Jan</span>
+              <span class="year">2019</span>
+            </span>
+            <h2>Formations développeur web</h2>
+            <p id="place2">Formations qualifiante (niveau Bac+2) chez E2N à Noyon</p>
+          </div>
+        </article>
+      </section>
+      <!--Séparation-->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <hr id="hr1">
           </div>
         </div>
       </div>
-    </section>
-    <section class="Contact" id="contact">
-      <h1>Contact !</h1>
-      <div class="sec">
-        <p><i class="fab fa-facebook"></i>Théo Levert<p>
-        <p>N'hésitez pas à me contacter à l'adresse suivante : theo1007@outlook.fr</p>
-        <p>Je vous répondrai dans les meilleurs délais !</p>
-      </div>
-    </section>
-  </article>
-  <footer>
-    <p>Copyright 2019 Théo Levert - Toute reproduction interdite</p>
-  </footer>
-  <script type="text/javascript" src="js/nav.js"></script>
-</body>
-</html>
+      <!-- Compétences -->
+      <section id="skills">
+        <div class="row" id="competences">
+          <div class="col-lg-12 text-center">
+            <div class="titre">
+              <h2>Mes Compétences</h2>
+            </div>
+          </div>
+          <div class="col-lg-12 text-center">
+            <h4>Système d'exploitation</h4>
+            <div class="row">
+              <div class="offset-lg-1 col-lg-4">
+                <p class="text-center">Linux</p>
+                <img src="img/linux.png" class="icon" />
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
+                </div>
+              </div>
+              <div class="offset-lg-2 col-lg-4">
+                <p class="text-center">Windows</p>
+                <img src="img/index.png" class="icon" />
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%">90%</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 text-center">
+              <h4 id="Langages1">Langages / Frameworks</h4>
+              <div class="row">
+                <div class="col-lg-4">
+                  <p class="icon5">HTML</p>
+                  <img src="img/html.png" class="icon" />
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <p class="icon2">CSS</p>
+                  <img src="img/css.png" class="icon1" />
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <p class="icon5">Bootstrap</p>
+                  <img src="img/bootstrap.png" class="icon" />
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%</div>
+                  </div>
+                </div>
+                <div class="col-lg-12 text-center">
+                  <h4 class="divers">Divers</h4>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <p class="icon5">Atom</p>
+                      <img src="img/atom.png" class="icon" />
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <p class="icon4">Git</p>
+                      <img src="img/git.png" class="icon3" />
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <p class="icon5">Github</p>
+                      <img src="img/github.png" class="icon" />
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 text-center">
+                  <h4 id="Langages">Langues</h4>
+                  <div class="row">
+                    <div class="col-lg-4 offset-lg-1">
+                      <p class="icon5">Anglais</p>
+                      <img src="img/flageng.png" class="icon" />
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                      <p class="icon5" id="place3">Espagnol</p>
+                      <img src="img/flagesp.png" class="icon" />
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!--Séparation-->
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <hr id="hr1">
+                </div>
+              </div>
+            </div>
+            <!--Loisir-->
+            <section id="loisir">
+              <div class="row" id="contact">
+                <div class="col-md-12 col-xs-12 text-center">
+                  <div class="titre">
+                    <h3 class="hobbies">Mes Loisirs</h3>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <p>Voyager</p>
+                        <img src="img/voyage.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <p>Football</p>
+                        <img src="img/ball.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <p>Boxe</p>
+                        <img src="img/boxe.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <!--Séparation-->
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <hr id="hr1">
+                  </div>
+                </div>
+              </div>
+              <!--Contact-->
+              <section id="contact">
+                <div class="row" id="contact">
+                  <div class="col-md-12 col-xs-12 text-center">
+                    <div class="titre">
+                      <h3 class="contact">Me contacter</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div>
+                  <div class="col-lg-2 col-xs-12 text-center">
+                    <p class="paragraphe" id="location"><a href="https://www.facebook.com/profile.php?id=100011658492390" target="_blank"  title="Facebook"><i class="fab fa-facebook-square" id="Git"></i></a></p>
+                  </div>
+                  <div class="col-lg-2 col-xs-12 text-center">
+                    <p class="paragraphe"><a href="#" title="Email"><i class="fas fa-at" id="mail"></i><br /></a>theo1007@outlook.fr</p>
+                  </div>
+                  <div class="col-lg-2 col-xs-12 text-center">
+                    <p class="paragraphe"><a href="https://www.linkedin.com/in/th%C3%A9o-levert-b5a97a165/" target="_blank"  title="Linkedin"><i class="fab fa-linkedin" id="Git"></i></a></p>
+                  </div>
+                  <div class="col-lg-2 col-xs-12 text-center">
+                    <p class="paragraphe"><a href="https://github.com/Theol1999" target="_blank"  title="Github"><i class="fab fa-github" id="Git"></i></a></p>
+                  </div>
+                  <div class="col-lg-2"></div>
+                </div>
+              </section>
+              <!--Footer-->
+              <footer id="footer">
+                <div class="col-lg-12 col-xs-12 text-center copyright">
+                  <p class="paragraphe1">© 2019 - Théo LEVERT - Toutes reproduction interdite</p>
+                </div>
+              </footer>
+
+              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            </body>
+            </html>
